@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const ToDo = require('./model');
 const app = express();
 app.use(express.json());
-mongoose.connect('mongodb+srv://balagapujitha63_db_user:J3J4eJCby5V9kL4I@cluster0.nufscab.mongodb.net/').then(() => console.log('connected to db..')).catch(err => console.log(err))
+mongoose.connect('mongodb+srv://balagapujitha63_db_user:@cluster0.nufscab.mongodb.net/').then(() => console.log('connected to db..')).catch(err => console.log(err))
 app.post('/add_user',async (req,res) => {
     const {title} = req.body;
     const {description} = req.body;
